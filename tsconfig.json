@@ -1,0 +1,12 @@
+{
+  "extends": "@adonisjs/tsconfig/tsconfig.app.json",
+  "compilerOptions": {
+    "rootDir": "./",
+    "outDir": "./build"
+  },
+  "include": [
+    "./**/*.ts",
+    ".adonisjs/server/**/*.ts" // <-- Adicione esta linha
+  ],
+  "references": [{ "path": "./tsconfig.inertia.json" }]
+}
