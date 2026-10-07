@@ -8,10 +8,19 @@ import { BaseModel, column } from '@adonisjs/lucid/orm'
 import { DateTime } from 'luxon'
 
 export class CharacterSchema extends BaseModel {
-  static $columns = ['colors', 'createdAt', 'description', 'hardness', 'id', 'name', 'photoUrl', 'specie', 'updatedAt'] as const
+  static $columns = [
+    'color',
+    'createdAt',
+    'description',
+    'hardness',
+    'id',
+    'name',
+    'specie',
+    'updatedAt',
+  ] as const
   $columns = CharacterSchema.$columns
   @column()
-  declare colors: any | null
+  declare color: string
   @column.dateTime({ autoCreate: true })
   declare createdAt: DateTime | null
   @column()
@@ -23,9 +32,7 @@ export class CharacterSchema extends BaseModel {
   @column()
   declare name: string
   @column()
-  declare photoUrl: string | null
-  @column()
-  declare specie: string | null
+  declare specie: string
   @column.dateTime({ autoCreate: true, autoUpdate: true })
   declare updatedAt: DateTime | null
 }

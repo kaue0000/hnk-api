@@ -3,6 +3,4 @@
  * DO NOT EDIT manually
  */
 
-export const controllers = {
-  Characters: () => import('#controllers/characters_controller'),
-}
+export const controllers = {}

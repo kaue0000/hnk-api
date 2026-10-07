@@ -2,8 +2,5 @@
 import type { routes } from './index.ts'
 
 export interface ApiDefinition {
-  home: typeof routes['home']
-  characters: {
-    index: typeof routes['characters.index']
-  }
+
 }

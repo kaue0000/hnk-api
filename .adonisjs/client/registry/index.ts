@@ -6,18 +6,7 @@ import type { ApiDefinition } from './tree.d.ts'
 const placeholder: any = {}
 
 const routes = {
-  'home': {
-    methods: ["GET","HEAD"],
-    pattern: '/',
-    tokens: [{"old":"/","type":0,"val":"/","end":""}],
-    types: placeholder as Registry['home']['types'],
-  },
-  'characters.index': {
-    methods: ["GET","HEAD"],
-    pattern: '/characters',
-    tokens: [{"old":"/characters","type":0,"val":"characters","end":""}],
-    types: placeholder as Registry['characters.index']['types'],
-  },
+,
 } as const satisfies Record<string, AdonisEndpoint>
 
 export { routes }
